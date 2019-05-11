@@ -27,7 +27,7 @@ proc StenosisWizard::Wizard::GeometryTypeChange { } {
                 smart_wizard::SetProperty Geometry Length,value 100
                 smart_wizard::SetProperty Geometry Precision,state normal
                 smart_wizard::SetProperty Geometry Tpoly,state hidden
-                smart_wizard::SetProperty Geometry ImageGeom,value GeometryCircular.png
+                smart_wizard::SetProperty Geometry ImageGeom,value Geometry.png
             }
             "Triangular" {
                 smart_wizard::SetProperty Geometry Length,value 350
@@ -40,14 +40,14 @@ proc StenosisWizard::Wizard::GeometryTypeChange { } {
                 smart_wizard::SetProperty Geometry Length,value 350
                 smart_wizard::SetProperty Geometry Delta,value 16.9
                 smart_wizard::SetProperty Geometry Precision,state hidden
-                smart_wizard::SetProperty Geometry ImageGeom,value GeometryPolygonal2.png
+                smart_wizard::SetProperty Geometry ImageGeom,value GeometryPolygonal.png
             }
             "Spherical" {
                 smart_wizard::SetProperty Geometry Length,value 350
                 smart_wizard::SetProperty Geometry Delta,value 17.5
                 smart_wizard::SetProperty Geometry Precision,state hidden
                 smart_wizard::SetProperty Geometry Tpoly,state hidden
-                smart_wizard::SetProperty Geometry ImageGeom,value GeometrySpherical2.png
+                smart_wizard::SetProperty Geometry ImageGeom,value GeometrySpherical.png
             }
         }
         smart_wizard::AutoStep $curr_win Geometry

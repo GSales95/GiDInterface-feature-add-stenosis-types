@@ -7,7 +7,7 @@
           <Item n="ImageGeom" v="Geometry.png" type="image"/>
         </Frame>
         <Frame  n="Data" position="left">
-          <Item n="Type" pn="Stenosis type" v="Circular" type="combo" values="Circular,Spherical,Triangular,Polygonal,PruebaVSC" onchange="StenosisWizard::Wizard::GeometryTypeChange" />
+          <Item n="Type" pn="Stenosis type" v="Circular" type="combo" values="Circular,Spherical,Triangular,Polygonal,PruebaVSC22" onchange="StenosisWizard::Wizard::GeometryTypeChange" />
           <Item n="Length" pn="Length" v="100" type="double" />
           <Item n="Radius" pn="Radius" v="9.53" type="double" />
           <Item n="Z" pn="Z0" v="38.1" type="double" />
@@ -49,7 +49,7 @@
         <Frame n="Data" position="left">
           <Item n="Cuts" pn="Number of cuts" v="6" type="integer"/>
           <Item n="CentralMesh" pn="Central Mesh size" v="1" type="integer" />
-          <Item n="MeshSize" pn="Mesh size" v="8" type="integer" />
+          <Item n="MeshSize" pn="Mesh size" v="2" type="integer" />
           <Item n="InitialTime" pn="Initial time" v="0" type="integer" mxp="container[@un='FLTimeParameters']/value[@n='InitialTime']"/>
           <Item n="EndTime" pn="End time" v="10" type="integer" mxp="container[@un='FLTimeParameters']/value[@n='EndTime']"/>
           <Item n="DeltaTime" pn="Delta time" v="0.1" type="integer" mxp="container[@un='FLTimeParameters']/value[@n='DeltaTime']"/>
