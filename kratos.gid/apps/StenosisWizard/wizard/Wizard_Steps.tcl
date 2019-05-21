@@ -195,14 +195,14 @@ proc StenosisWizard::Wizard::DrawPolygonal {length radius start end delta tpoly 
     set end_x [expr double($length)/2]
 
     set halfpoly [expr double($tpoly)/2]
-    # set hdelta [expr $delta) - $radius)]
+    set hdelta [expr $delta) - $radius)]
     
     set origin_poly [expr double($start) - double($halfpoly)]
     set end_poly [expr double($end) + double($halfpoly)]
 
     # set neg_halftpoly [expr double($tpoly)/-2]
     # set pos_halftpoly [expr double($tpoly)/2]
-    set doubleneg_radius [expr double($radius) * -2.0]
+    set doubleradius [expr double($radius) * 2.0]
 
     set layer [GiD_Info Project LayerToUse]
     GiD_Process 'Layers Color $layer 153036015 Transparent $layer 255 escape Mescape
@@ -211,9 +211,9 @@ proc StenosisWizard::Wizard::DrawPolygonal {length radius start end delta tpoly 
     GiD_Process Geometry Create Line $origin_x,$radius $end_x,$radius escape Mescape 
     GiD_Process Utilities Copy Lines DoExtrude Surfaces MaintainLayers Rotation FJoin 1 FJoin 2 360 2 escape Mescape 
 
-    GiD_Process Geometry Create Line $origin_x,-$radius $origin_poly,-$radius -$halfpoly,0 $halfpoly,0 $end_poly,-$radius $end_x,-$radius escape Mescape
+    GiD_Process Geometry Create Line $origin_x,-$radius $origin_poly,-$radius -$halfpoly,$hdelta $halfpoly,$hdelta $end_poly,-$radius $end_x,-$radius escape Mescape
 
-    GiD_Process Geometry Create Line $origin_x,$doubleneg_radius $end_x,$doubleneg_radius escape Mescape
+    GiD_Process Geometry Create Line $origin_x,-$doubleradius $end_x,-$doubleradius escape Mescape
     GiD_Process Utilities Copy Lines DoExtrude Surfaces MaintainLayers Rotation FJoin 11 FJoin 12 360 5 6 7 8 9 escape Mescape 
     
     GiD_Process Geometry Create IntMultSurfs 1 2 3 4 5 6 escape Mescape 
